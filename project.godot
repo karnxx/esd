@@ -26,3 +26,7 @@ movie_writer/disable_vsync=true
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
