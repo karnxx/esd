@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3hvna6rs37ce"]
+
+[ext_resource type="Texture2D" uid="uid://dnrpg2v8cw4bh" path="res://icon.svg" id="1_2sdc1"]
+[ext_resource type="Script" uid="uid://crob4ht8nkr0y" path="res://script/character/plr/plr.gd" id="1_nmb1b"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nmb1b"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_61anu"]
+radius = 0.800767
+
+[node name="plr" type="CharacterBody3D"]
+axis_lock_linear_z = true
+script = ExtResource("1_nmb1b")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+visible = false
+sprite_frames = SubResource("SpriteFrames_nmb1b")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+texture = ExtResource("1_2sdc1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_61anu")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.999976, 0, -0.00696382, -0.00141646, 0.979095, 0.203398, 0.00681825, 0.203403, -0.979071, 0, 0.92396, -2.50708)
